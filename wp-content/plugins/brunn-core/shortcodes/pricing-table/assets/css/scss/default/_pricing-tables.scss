@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.qodef-pricing-tables {
+    @include qodefRelativeHolderLayout();
+}
+
+.qodef-price-table {
+
+    .qodef-pt-inner {
+        @include qodefRelativeHolderLayout();
+        background-color: #fafafa;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 0;
+
+                &.qodef-pt-title-holder {
+                    position: relative;
+                    padding: 64px 0 0 47%;
+                    color: $default-heading-color;
+                    font-size: 25px;
+                    font-weight: 700;
+                    text-align: left;
+
+                    @include ipad-landscape {
+                        padding: 64px 0 0 28%;
+                    }
+	                
+                    .qodef-pt-title {
+                        display: block;
+                    }
+
+                    .qodef-pt-mark {
+                        position: relative;
+                        display: block;
+                        margin: 3px 0 0;
+                        font-size: 14px;
+                        font-family: $additional-text-font;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        color: #484848;
+                    }
+                }
+
+                &.qodef-pt-prices {
+                    position: absolute;
+					padding: 5%;
+                    right: 52%;
+
+                    @include ipad-landscape {
+                        right: 67%;
+                    }
+	                
+                    .qodef-pt-value {
+                        position: absolute;
+                        vertical-align: super;
+                        top: 30%;
+                        left: -5px;
+                        font-size: 24px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: #efefef;
+
+                        @include ipad-landscape {
+                            top: 20%;
+                        }
+                    }
+
+                    .qodef-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-size: 120px;
+                        line-height: 1em;
+                        font-weight: 400;
+                        font-family: $additional-text-font;
+                        color: #efefef;
+
+                        @include ipad-landscape {
+                            font-size: 77px;
+                        }
+                    }
+                }
+
+                &.qodef-pt-content {
+                    padding: 28px 0 0 47%;
+
+                    @include ipad-landscape {
+                        padding: 28px 0 0 28%;
+                    }
+
+                    ul{
+                        list-style: none;
+
+                        li{
+                            padding: 4px 0;
+                            color: #a1a1a1;
+
+                            &:before{
+                                content: '✓';
+                                margin-right: 18px;
+
+                                @include ipad-landscape {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.qodef-pt-button {
+                    text-align: left;
+                    padding: 28px 0 0 47.5%;
+
+                    @include ipad-landscape {
+                        padding: 28px 0 0 28%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

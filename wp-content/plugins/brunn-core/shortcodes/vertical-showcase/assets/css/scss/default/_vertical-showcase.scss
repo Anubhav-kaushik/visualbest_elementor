@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Vertical Showcase style - begin
+   ========================================================================== */
+
+.qodef-vertical-showcase {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    &.qodef-vs-ready-animation {
+
+        .qodef-vs-frame-holder {
+            @include qodefTransform(translateY(100%));
+        }
+
+        .qodef-vs-stripe {
+            top: 0 !important;
+        }
+    }
+
+    &.qodef-vs-no-frame {
+        .qodef-vs-frame-mobile-holder img {
+            opacity: 0;
+        }
+    }
+
+    &.qodef-vs-last-slide {
+        
+        .qodef-vs-stripe {
+            top: 0 !important;
+        }
+
+        .qodef-vs-contact-form, .qodef-vs-social-widget {
+            @include qodefTransform(translateY(0));
+        }
+
+        .qodef-vs-frame-holder {
+            @include qodefTransform(translateY(-120%));
+        }
+
+        .qodef-vs-frame-info {
+            z-index: -1;
+
+            .qodef-vs-frame-info-top {
+
+                .qodef-vs-frame-title, .qodef-vs-frame-subtitle {
+                    @include qodefTransform(translateX(-750px));
+                    opacity: 0;
+                }
+            }
+
+            .qodef-vs-frame-info-bottom {
+
+                .qodef-vs-frame-slide-text {
+                    @include qodefTransform(translateX(-100px));
+                    opacity: 0;
+                }
+
+                .qodef-vs-frame-slide-number {
+                    @include qodefTransform(translateX(-100px));
+                    opacity: 0;
+                }
+
+                &:after {
+                    @include qodefTransform(scaleX(0));
+                    @include qodefTransition(1s);
+                }
+            }
+
+            .qodef-vs-frame-info-other {
+                @include qodefTransform(translateY(200px));
+                opacity: 0;
+            }
+        }
+    }
+
+    .qodef-vs-stripe {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        width: 300%;
+        height: 200%;
+        background: $first-main-color;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transform-origin: 50% 0;
+        @include qodefTransition(1.2s .3s cubic-bezier(1, 0.12, 0.25, 1));
+        will-change: transform;
+    }
+
+    .qodef-vs-holder {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/app_bg.jpg');
+        overflow: hidden;
+    }
+
+    .qodef-vs-item-info {
+        display: none;
+    }
+
+    .qodef-vs-frame-info {
+        position: absolute;
+        z-index: 1233;
+        @include qodefTransition(1.2s .3s cubic-bezier(1,.12,.25,1));
+
+        .touch & {
+            pointer-events: none; //allow swiper touch-move
+        }
+
+        &.qodef-vs-frame-animate-out {
+
+            .qodef-vs-frame-info-top {
+
+                .qodef-vs-frame-title, .qodef-vs-frame-subtitle {
+                    @include qodefTransform(translateX(-750px));
+                    opacity: 0;
+                }
+            }
+
+            .qodef-vs-frame-info-bottom {
+
+                .qodef-vs-frame-slide-text {
+                    @include qodefTransform(translateX(-100px));
+                    opacity: 0;
+                }
+
+                .qodef-vs-frame-slide-number {
+                    @include qodefTransform(translateX(-100px));
+                    opacity: 0;
+                }
+
+                &:after {
+                    @include qodefTransform(scaleX(0));
+                    @include qodefTransition(1s);
+                }
+            }
+
+            .qodef-vs-frame-info-other {
+                @include qodefTransform(translateY(200px));
+                opacity: 0;
+            }
+        }
+
+        &.qodef-vs-frame-even {
+
+            .qodef-vs-frame-info-top {
+                margin-top: 140px;
+            }
+
+            .qodef-vs-frame-info-bottom {
+                margin-top: -280px;
+            }
+
+            .qodef-vs-frame-info-other {
+                img {
+                    -webkit-filter: invert(100%);
+                    filter: invert(100%);
+                }
+            }
+        }
+
+        .qodef-vs-frame-info-top {
+            position: absolute;
+            padding: 20px;
+            margin-top: -285px;
+            width: 400px;
+            z-index: 1234;
+            color: grey;
+            opacity: 1;
+            box-sizing: border-box;
+
+            .qodef-vs-frame-title, .qodef-vs-frame-subtitle {
+                @include qodefTransform(translateX(-670px));
+            }
+
+            .qodef-vs-frame-title {
+                @include qodefTransition(transform 1s .3s,opacity .5s .3s);
+            }
+
+            .qodef-vs-frame-subtitle {
+                @include qodefTransition(transform 1s .4s,opacity .5s .4s);
+            }
+        }
+
+        .qodef-vs-frame-info-bottom {
+            position: absolute;
+            padding: 20px;
+            margin-top: 50px;
+            z-index: 1234;
+            color: #fff;
+
+            .qodef-vs-frame-slide-text {
+                @include qodefTransform(translateX(-469px));
+                @include qodefTransition(transform 1.5s .1s,opacity .5s .2s);
+                opacity: 1;
+            }
+
+            .qodef-vs-frame-slide-number {
+                @include qodefTransform(translateX(-482px));
+                @include qodefTransition(transform 1s .2s,opacity .5s .4s);
+                opacity: 1;
+            }
+
+            &:after {
+                content: "";
+                background: -webkit-gradient(linear,0 0,100% 0,from(#fff),to(rgba(255, 255, 255, 0)),color-stop(5%,#fff),color-stop(5%,#fff));
+                position: absolute;
+                width: 800px;
+                height: 1px;
+                top: 65%;
+                left: -280px;
+                @include qodefTransform(scaleX(1));
+                @include qodefTransition(1s .3s);
+            }
+        }
+
+        .qodef-vs-frame-info-other {
+            position: absolute;
+            left: -200px;
+            padding: 20px;
+            margin-top: 70px;
+            @include qodefTransform(translateY(320px));
+            width: 410px;
+            box-sizing: border-box;
+            z-index: 1234;
+            text-align: center;
+            color: #fff;
+            opacity: 1;
+            @include qodefTransition(transform 1s .2s,opacity .2s .3s);
+
+            .touch & {
+                pointer-events: auto; //override parent pointer-events none on touch devices
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                width: 143px;
+                height: 45px;
+                margin: 0 5px;
+
+                img {
+                    @include qodefTransition(.3s);
+                }
+            }
+        }
+    }
+
+    .qodef-vs-frame-slide-number {
+        font-family: $additional-text-font;
+        font-size: 135px;
+        line-height: 1em;
+    }
+
+    .qodef-vs-frame-slide-text {
+        font-family: $additional-text-font;
+        font-size: 16px;
+        font-weight: 300;
+        width: 140px;
+        line-height: 1.5em;
+    }
+    
+    .qodef-vs-frame-subtitle {
+        font-family: $additional-text-font;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+    .qodef-vs-frame-title {
+        font-family: $default-text-font;
+        font-size: 14px;
+        font-weight: 600;
+        color: $default-heading-color;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-left: 78px;
+        margin-bottom: 18px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 57px;
+            height: 2px;
+            background: $first-main-color;
+            position: absolute;
+            left: 0;
+            margin-left: -75px;
+            top: 12px;
+        }
+    }
+
+    .qodef-vs-frame-holder {
+        position: absolute;
+        z-index: 1234;
+        pointer-events: none;
+        @include qodefTransition(1.2s .3s cubic-bezier(1,.12,.25,1));
+
+        img {
+            z-index: 123;
+            position: relative;
+        }
+
+        .qodef-vs-inner-frame {
+            width: 52%;
+            height: 66%;
+            margin: 25.2% 0 0 25%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -23;
+        }
+    }
+
+    .swiper-container {
+        height: 100vh;
+        z-index: 1222;
+
+        .swiper-wrapper {
+            @include qodefTransition(1s .5s !important);
+        }
+
+        .swiper-slide:last-of-type() {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1 !important;
+        }
+
+        img {
+            height: 700px;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-pagination {
+        right: 45px;
+        padding-top: 24px;
+        padding-left: 5px;
+        z-index: 99999;
+        
+        .swiper-pagination-bullet {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: $default-heading-color;
+            margin-bottom: 20px;
+            opacity: 1;
+            pointer-events: none;
+            @include qodefTransition(.3s);
+
+            &.bullet-clickable {
+                pointer-events: auto;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background: $default-heading-color;
+                @include qodefTransform(scale(1.2));
+            }
+        }
+    }
+
+    .qodef-vs-contact-form {
+        background: #fff;
+        width: 90%;
+        height: 90%;
+        max-width: 1225px;
+        max-height: 662px;
+        box-sizing: border-box;
+        position: relative;
+        padding: 60px;
+        @include qodefTransform(translateY(120%));
+        @include qodefTransition(1.2s .3s cubic-bezier(1,.12,.25,1));
+
+        .qodef-vs-contact-form-title, .qodef-vs-contact-form-subtitle {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .qodef-vs-contact-form-info {
+            margin: 37px 0 63px 0;
+        }
+
+        .qodef-vs-contact-form-subtitle {
+            font-family: $additional-text-font;
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 664px;
+        }
+
+        .qodef-custom-cf7 {
+            .qodef-grid-col-6 {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 5px;
+
+                input {
+                    border-radius: 2px;
+                    height: 69px;
+                    font-weight: 400;
+                }
+            }
+
+            .qodef-custom-cf7-btn {
+                text-align: center;
+
+                button {
+                    margin-top: 36px;
+                }
+            }
+        }
+    }
+
+    .qodef-vs-social-widget {
+        margin-top: 175px;
+        text-align: center;
+        @include qodefTransform(translateY(170px));
+        @include qodefTransition(1.5s .2s cubic-bezier(.96,.22,.46,.82));
+
+        > div {
+            display: inline-block;
+        }
+
+        .qodef-vs-social-widget-label {
+            font-size: 12px;
+            color: #fff;
+            display: inline-block;
+            margin-right: 11px;
+        }
+
+        .qodef-social-icon-widget-holder {
+            margin: 0 6px;
+        }
+    }
+}
+
+/* ==========================================================================
+   Vertical Showcase style style - end
+   ========================================================================== */

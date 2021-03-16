@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.qodef-testimonials-holder {
+    @include qodefRelativeHolderLayout();
+
+    .qodef-testimonials,
+    .qodef-testimonial-content,
+    .qodef-testimonial-text-holder {
+        @include qodefRelativeHolderLayout();
+    }
+
+    .qodef-testimonials {
+        padding: 0 100px;
+        box-sizing: border-box;
+    }
+
+    .qodef-testimonial-image {
+
+        img {
+            width: auto !important;
+            border-radius: 5em;
+        }
+    }
+
+    .qodef-testimonial-text {
+        font-size: 18px;
+        font-family: $additional-text-font;
+    }
+
+    .qodef-testimonial-author {
+        > * {
+            display: block;
+        }
+
+        .qodef-testimonials-author-name {
+            font-family: $default-text-font;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+
+        .qodef-testimonials-author-job {
+            font-size: 14px;
+            font-weight: 300;
+            font-family: $additional-text-font;
+        }
+    }
+
+    .qodef-owl-slider {
+        .owl-nav {
+
+            .owl-prev,
+            .owl-next {
+                > span {
+                    font-size: 30px;
+                    @include qodefTransition(.3s);
+                }
+
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+
+            .owl-prev {
+                span {
+                    &:hover {
+                        @include qodefTransform(translateX(-3px));
+                    }
+                }
+            }
+
+            .owl-next {
+                span {
+                    &:hover {
+                        @include qodefTransform(translateX(3px));
+                    }
+                } 
+            }
+        }
+
+        %owl-dots-style {
+            font-size: 14px;
+            font-family: $additional-text-font;
+            font-weight: 300;
+            line-height: 1em;
+        }
+
+        .owl-dots {
+            counter-reset: slides-num;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            @include qodefTransform(translateX(-50%));
+            color: #a1a1a1;
+
+            @extend %owl-dots-style;
+
+            &:after {
+
+                @if length(counter(slides-num) == 1) {
+                    content: "/0" counter(slides-num);
+                }
+                @else {
+                    content: "/" counter(slides-num);
+                }
+
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+            }
+
+        }
+
+        .owl-dot {
+            display: inline-block;
+            counter-increment: slides-num; // i++
+            position: absolute;
+            margin: 0;
+            min-width: 22px; /* fake not moving */
+
+            span {
+                display: none;
+            }
+
+            &.active {
+
+                position: relative;
+                top: -1px;
+                left: 2px;
+
+
+                &:before {
+
+                    @if length(counter(slides-num) == 1) {
+                        content: "0" counter(slides-num);
+                    }
+                    @else {
+                        content: counter(slides-num);
+                    }
+
+                    display: inline-block;
+                    vertical-align: middle;
+                    @extend %owl-dots-style;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    /* Light/Dark styles */
+    &.qodef-testimonials-light {
+
+        .qodef-testimonial-title,
+        .qodef-testimonial-text,
+        .qodef-testimonial-author {
+            color: #fff;
+        }
+
+        .owl-dots {
+
+            .owl-dot {
+
+                span {
+                    border: 2px solid rgba(#fff, .5);
+                }
+
+                &:hover,
+                &.active {
+
+                    span {
+                        background-color: #fff;
+                        border-color: #fff;
+                    }
+
+                    &:before {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+
+            .owl-prev,
+            .owl-next {
+                color: #fff;
+            }
+        }
+    }
+
+    &.qodef-testimonial-custom-title {
+        .qodef-testimonial-title {
+            font-size: 50px;
+            line-height: 1.1em;
+
+            @include phone-landscape {
+                font-size: 25px;
+            }
+        }
+    }
+
+}
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

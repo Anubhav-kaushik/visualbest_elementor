@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+    
+    &.qodef-ps-small-gallery-layout {
+    
+        .qodef-ps-image-holder {
+            width: 100%;
+        
+            .qodef-ps-image {
+                float: left;
+                overflow: hidden;
+
+                a {
+                    overflow: hidden;
+
+                    img {
+                        backface-visibility: hidden;
+                        @include qodefTransition(.6s);
+                    }
+                }
+
+                &:hover {
+                    
+                    img {
+                        @include qodefTransform(scale(1.04));
+                    }
+                }
+	        }
+        }
+
+        .qodef-ps-main-title {
+            margin: 38px 0 22px;
+        }
+
+        .qodef-ps-content-item{
+            padding-right: 0;
+            margin-bottom: 28px;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - end
+   ========================================================================== */

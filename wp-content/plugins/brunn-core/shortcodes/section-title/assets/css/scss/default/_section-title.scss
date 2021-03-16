@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.qodef-section-title-holder {
+    @include qodefRelativeHolderLayout();
+	box-sizing: border-box;
+	
+	&.qodef-st-two-columns {
+		
+		$space_label: ('tiny', 'small', 'normal');
+		$space_width: (5, 10, 15);
+		
+		@for $i from 0 to length($space_label) {
+			&.qodef-st-#{nth($space_label,$i+1)}-space {
+				$column_width: nth($space_width,$i+1);
+				
+				.qodef-st-inner {
+					margin: 0 -#{$column_width}px;
+				}
+			
+				.qodef-st-title,
+				.qodef-st-text {
+					padding: 0 #{$column_width}px;
+				}
+			}
+		}
+		
+		.qodef-st-title,
+		.qodef-st-text {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			float: left;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+		&.qodef-st-title-left {
+			
+			.qodef-st-title {
+				text-align: right;
+			}
+			
+			.qodef-st-text {
+				text-align: left;
+			}
+		}
+		
+		&.qodef-st-title-right {
+			
+			.qodef-st-title {
+				float: right;
+				text-align: left;
+			}
+			
+			.qodef-st-text {
+				text-align: right;
+			}
+		}
+	}
+
+    .qodef-label {
+        margin: 0 0 14px;
+        position: relative;
+        z-index: 1;
+
+        .qodef-label-line {
+            display: inline-block;
+            vertical-align: middle;
+            height: 2px;
+            width: 40px;
+            background-color: $first-main-color;
+
+        }
+
+        .qodef-label-text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: $default-heading-color;
+            padding-left: 15px;
+			font-weight: 600;
+        }
+    }
+	
+    .qodef-st-title {
+	    display: block;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+	    
+	    .qodef-st-title-bold {
+		    font-weight: 700;
+	    }
+	    
+	    .qodef-st-title-light {
+		    font-weight: 300;
+	    }
+
+        .qodef-st-title-background {
+            margin: 0;
+            display: inline;
+            background-image: linear-gradient(to right, $first-main-color 0%, $first-main-color 100%);
+            background-position: 0 100%;
+            background-size: 100% 50%;
+            background-repeat: repeat-x;
+            padding: 0 4px;
+        }
+
+    }
+
+    .qodef-st-background-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 100px;
+        line-height: 1em;
+        color: #ededed;
+        font-family: $additional-text-font;
+        font-weight: 400;
+        opacity: 0;
+        @include qodefTransition(1s .2s cubic-bezier(0.89, 0.14, 0.25, 1));
+		
+		&.qodef-item-appear {
+            opacity: 1;
+		}
+    }
+    
+    .qodef-st-text {
+	    display: block;
+        margin: 14px 0 0;
+        position: relative;
+        z-index: 1;
+    }
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+    
+    &.qodef-ps-gallery-layout {
+        
+        .qodef-ps-image-holder {
+			margin: 71px 0 0;
+	        width: 100%;
+	
+	        .qodef-ps-image {
+                float: left;
+                overflow: hidden;
+
+                a {
+                    overflow: hidden;
+
+                    img {
+                        backface-visibility: hidden;
+                        @include qodefTransition(.6s);
+                    }
+                }
+
+                &:hover {
+                    
+                    img {
+                        @include qodefTransform(scale(1.04));
+                    }
+                }
+	        }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - end
+   ========================================================================== */

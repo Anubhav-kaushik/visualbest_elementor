@@ -1,0 +1,1 @@
+<div class="qodef-tab-container" id="tab-<?php echo sanitize_title($tab_title); ?>"><p><?php echo brunn_select_get_module_part($tab_text); ?></p></div>

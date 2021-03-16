@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+
+.qodef-testimonials-holder {
+    
+    &.qodef-testimonials-standard {
+        text-align: center;
+
+        .qodef-testimonial-content {
+            padding-top: 40px;
+            padding-bottom: 78px;
+            max-width: 850px;
+        }
+
+        .qodef-testimonial-image {
+            @include qodefRelativeHolderLayout();
+            margin: 0 0 26px;
+
+            .qodef-testimonial-image-inner {
+                position: relative;
+                width: 114px;
+                margin: auto;
+
+                .qodef-testimonial-image-icon {
+                    position: absolute;
+                    top: -7px;
+                    right: 4px;
+                    border-radius: 50%;
+                    background-color: $first-main-color;
+                    color: #fff;
+                    height: 27px;
+                    width: 27px;
+                    text-align: center;
+                    line-height: 27px;
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .qodef-testimonial-title {
+            margin: 0;
+        }
+
+        .qodef-testimonial-author {
+            margin: 38px 0 0;
+            position: relative;
+
+            .qodef-testimonial-author-icon {
+                position: absolute;
+                display: block;
+                left: 50%;
+                top: 59px;
+                @include qodefTransform(translateX(-50%));
+
+                font-family: $additional-text-font;
+                font-size: 180px;
+                font-weight: 400;
+                color: rgba($default-heading-color, 0.05);
+            }
+
+            .qodef-testimonials-author-name,
+            .qodef-testimonials-author-job {
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        .qodef-testimonial-text {
+            margin: 26px 0 0;
+            line-height: 30px;
+            color: #696969;
+        }
+
+    }
+}
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */

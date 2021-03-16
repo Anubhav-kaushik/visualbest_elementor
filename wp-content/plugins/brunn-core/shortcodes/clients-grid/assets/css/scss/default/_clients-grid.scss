@@ -1,0 +1,68 @@
+/* ==========================================================================
+   clients Holder shortcode style - begin
+   ========================================================================== */
+
+.qodef-clients-grid-holder {
+	@include qodefRelativeHolderLayout();
+	text-align: center;
+	
+	&.qodef-cg-alignment-left {
+		text-align: left;
+	}
+	
+	&.qodef-cg-alignment-right {
+		text-align: right;
+	}
+	
+	.qodef-cc-link {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+    .qodef-item-space {
+        border-left: 1px solid $default-border-color;
+    }
+
+    $list_columns_map: (
+            6 : $laptop-landscape-large-plus-pixel,
+            5 : $laptop-landscape-mac-plus-pixel,
+            4 : $ipad-landscape-plus-pixel,
+            3 : $ipad-portrait-plus-pixel,
+            2 : $phone-landscape-plus-pixel
+    );
+
+    $list_columns: ('one', 'two', 'three', 'four', 'five', 'six');
+
+
+
+    @for $i from 0 to length($list_columns) {
+        $step: $i + 1;
+
+        &.qodef-#{nth($list_columns, $step)}-columns {
+
+            .qodef-item-space {
+
+                @if ($i > 0) {
+
+                    @media only screen and (min-width: map-get($list_columns_map, $step)) {
+
+                        &:nth-child(#{$step}n+1) {
+                            border:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.qodef-one-columns {
+        .qodef-item-space {
+            border: none !important;
+        }
+    }
+}
+
+/* ==========================================================================
+   clients Holder shortcode style - end
+   ========================================================================== */

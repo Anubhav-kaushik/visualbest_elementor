@@ -1,0 +1,794 @@
+/* ==========================================================================
+   Vertical Showcase responsive style - begin
+   ========================================================================== */
+   
+@media only screen and (max-width: 1919px) {
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-info {
+
+            .qodef-vs-frame-info-other {
+                margin-top: 331px;
+                left: 200px;
+                @include qodefTransform(translateY(-207px));
+
+                .qodef-vs-frame-animate-out & {
+                    @include qodefTransform(translateY(100px));
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-holder  {
+        
+            .qodef-vs-frame-mobile-holder {
+            
+                img {
+                    width: 550px;
+                }
+            }
+        }
+
+        .qodef-vs-frame-info {
+
+            .qodef-vs-frame-info-other {
+                margin-top: 331px;
+                left: 200px;
+                @include qodefTransform(translateY(-207px));
+
+                .qodef-vs-frame-animate-out & {
+                    @include qodefTransform(translateY(100px));
+                }
+            }
+        }
+    }
+}
+
+@include laptop-landscape-large {
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-holder  {
+        
+            .qodef-vs-frame-mobile-holder {
+            
+                img {
+                    width: 500px;
+                }
+            }
+        }
+
+        .qodef-vs-frame-info {
+
+            &.qodef-vs-frame-even {
+                .qodef-vs-frame-info-top {
+                    margin-top: 53px;
+                }
+                
+                .qodef-vs-frame-info-bottom {
+                    margin-top: -235px;
+                }
+            }
+            
+            .qodef-vs-frame-info-top {
+                margin-top: -210px;
+        
+                .qodef-vs-frame-subtitle, .qodef-vs-frame-title {
+                    @include qodefTransform(translateX(-554px));
+                }
+            }
+
+            .qodef-vs-frame-info-bottom {
+                margin-top: 30px;
+            }
+
+            .qodef-vs-frame-info-other {
+                margin-top: 309px;
+                left: 200px;
+                @include qodefTransform(translateY(-242px));
+
+                .qodef-vs-frame-animate-out & {
+                    @include qodefTransform(translateY(100px));
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+            max-height: 500px;
+
+            .qodef-vs-contact-form-info {
+                margin: -14px 0 23px 0;
+            }
+
+            .qodef-custom-cf7 .qodef-custom-cf7-btn button {
+                margin-top: 5px;
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 55px;
+        }
+    }
+}
+
+@include laptop-landscape-mac {
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-holder  {
+        
+            .qodef-vs-frame-mobile-holder {
+            
+                img {
+                    width: 450px;
+                }
+            }
+        }
+
+        .qodef-vs-frame-info {
+
+            .qodef-vs-frame-info-bottom {
+
+                .qodef-vs-frame-slide-text, .qodef-vs-frame-slide-number {
+                    @include qodefTransform(translateX(-450px));
+                }
+            }
+        }
+
+        .qodef-vs-frame-slide-number {
+            font-size: 100px;
+        }
+
+        .qodef-vs-frame-subtitle {
+            font-size: 16px;
+        }
+
+        .qodef-vs-contact-form {
+            max-height: 440px;
+
+            .qodef-vs-contact-form-title h1 {
+                margin: 4px 0;
+            }
+
+            .qodef-vs-contact-form-info {
+                margin: -31px 0 23px 0;
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 43px;
+        }
+    }
+}
+
+@include ipad-landscape {
+
+    .qodef-vertical-showcase {
+        margin-top: -25px;
+
+        .qodef-vs-holder {
+            display: block;
+            
+            .qodef-vs-stripe {
+                top: 50%;
+                left: -100%;
+            }
+
+            .qodef-vs-frame-holder {
+                top: -5%;
+                left: 29%;
+            }
+
+            .qodef-vs-frame-info {
+                width: 100%;
+                height: 100%;
+
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 39%;
+                    }
+    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 11%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: 13%;
+                    left: 52%;
+                }
+
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 37%;
+                    left: 50%;
+                }
+
+                .qodef-vs-frame-info-other {
+                    margin-top: 63%;
+                    left: 61%;
+                }
+            }
+        }
+    }
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-info {
+
+            .qodef-vs-frame-info-bottom {
+                
+                .qodef-vs-frame-slide-number, .qodef-vs-frame-slide-text{
+                    @include qodefTransform(translateX(-450px));
+                }
+            }
+            
+            .qodef-vs-frame-info-top {
+                width: 392px;
+        
+                .qodef-vs-frame-subtitle, .qodef-vs-frame-title {
+                    @include qodefTransform(translateX(-500px));
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+            
+            .qodef-custom-cf7 {
+
+                .qodef-grid-col-6 {
+                    float: left;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@include ipad-portrait {
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-holder {
+            
+            .qodef-vs-stripe {
+                top: 50%;
+                left: -100%;
+            }
+
+            .qodef-vs-frame-holder {
+                top: 9%;
+                left: 21%;
+            }
+            
+            .qodef-vs-frame-info {
+                width: 100%;
+                height: 100%;
+
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 92%;
+                    }
+                    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 10%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: 7%;
+                    left: 50%;
+                }
+    
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 94%;
+                    left: 52%;
+                }
+    
+                .qodef-vs-frame-info-other {
+                    margin-top: 130%;
+                    left: 25%;
+                }
+            }
+        }
+    }
+    
+    .qodef-vertical-showcase {
+
+        &.qodef-vs-last-slide {
+
+            .qodef-vs-frame-holder {
+                @include qodefTransform(translateY(-150%));
+            }
+        }
+
+        .qodef-vs-frame-mobile-holder {
+                    
+            img {
+                width: 426px;
+            }
+        }
+
+        .qodef-vs-frame-info {
+
+            &.qodef-vs-frame-even {
+                .qodef-vs-frame-info-top {
+                    margin-top: 291px;
+                }
+                
+                .qodef-vs-frame-info-bottom {
+                    margin-top: -400px;
+                }
+            }
+            
+            .qodef-vs-frame-info-top {
+                margin-top: -420px;
+                width: 374px;
+
+                .qodef-vs-frame-title {
+                    margin-bottom: 0;
+                }
+
+                .qodef-vs-frame-subtitle {
+                    font-size: 14px;
+                    line-height: 1.6em;
+                }
+        
+                .qodef-vs-frame-subtitle, .qodef-vs-frame-title {
+                    @include qodefTransform(translateX(-180px));
+                }
+            }
+
+            .qodef-vs-frame-info-bottom {
+                margin-top: 300px;
+
+                &:after {
+                    content: none;
+                }
+
+                .qodef-vs-frame-slide-number {
+                    font-size: 76px;
+                    margin-top: -74px;
+                    @include qodefTransform(translateX(-140px));
+                }
+
+                .qodef-vs-frame-slide-text {
+                    font-size: 16px;
+                    @include qodefTransform(translateX(-20px));
+                }
+            }
+
+            .qodef-vs-frame-info-other {
+                margin-top: 607px;
+                left: -200px;
+                @include qodefTransform(translateY(-207px));
+
+                .qodef-vs-frame-animate-out & {
+                    @include qodefTransform(translateY(100px));
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+            margin-top: -34px;
+            max-height: 630px;
+            padding: 10px;
+
+            .qodef-custom-cf7 {
+
+                .qodef-grid-col-6 {
+                    float: none;
+                    width: 100%;
+                }
+            }
+
+            .qodef-vs-contact-form-info {
+                margin: 22px 0 23px 0;
+
+                .qodef-vs-contact-form-title h1 {
+                    font-size: 27px;
+                }
+
+                .qodef-vs-contact-form-subtitle {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 105px;
+        }
+    }
+}
+
+@include phone-portrait {
+    
+    .qodef-vertical-showcase {
+        margin-top: 0;
+
+        &.qodef-vs-last-slide {
+
+            .qodef-vs-frame-holder {
+                @include qodefTransform(translateY(-150%));
+            }
+        }
+
+        .qodef-vs-holder {
+
+            .qodef-vs-frame-holder  {
+                top: 14%;
+                left: 17%;
+            
+                .qodef-vs-frame-mobile-holder {
+                
+                    img {
+                        width: 250px;
+                    }
+                }
+            }
+
+            .qodef-vs-frame-info {
+    
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 104%;
+                    }
+                    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 9%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: 4%;
+                    left: 50%;
+                }
+    
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 108%;
+                    left: 52%;
+                }
+    
+                .qodef-vs-frame-info-other {
+                    margin-top: 174%;
+                    left: 2%;
+                }
+            }
+        }
+
+        .qodef-vs-frame-info {
+            
+            .qodef-vs-frame-info-top {
+                margin-top: -287px;
+                width: 374px;
+
+                .qodef-vs-frame-title {
+                    margin-bottom: 0;
+                }
+
+                .qodef-vs-frame-subtitle {
+                    font-size: 13px;
+                }
+        
+                .qodef-vs-frame-subtitle, .qodef-vs-frame-title {
+                    @include qodefTransform(translateX(-180px));
+                }
+            }
+
+            .qodef-vs-frame-info-bottom {
+                margin-top: 151px;
+
+                &:after {
+                    content: none;
+                }
+
+                .qodef-vs-frame-slide-number {
+                    font-size: 76px;
+                    margin-top: -74px;
+                    @include qodefTransform(translateX(-140px));
+                }
+
+                .qodef-vs-frame-slide-text {
+                    font-size: 16px;
+                    @include qodefTransform(translateX(-20px));
+                }
+            }
+
+            .qodef-vs-frame-info-other {
+                margin-top: 430px;
+                left: -200px;
+                @include qodefTransform(translateY(-207px));
+
+                .qodef-vs-frame-info-other a {
+                    width: 122px;
+                }
+
+                .qodef-vs-frame-animate-out & {
+                    @include qodefTransform(translateY(100px));
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+            margin-top: -34px;
+            max-height: 562px;
+            padding: 10px;
+
+            .qodef-custom-cf7 {
+
+                .qodef-grid-col-6 {
+                    input {
+                        height: 49px;
+                    }
+                }
+            }
+
+            .qodef-custom-cf7 .qodef-custom-cf7-btn button {
+                margin-top: 36px;
+            }
+
+            .qodef-custom-cf7-btn {
+                margin-top: -33px;
+            }
+
+            .qodef-vs-contact-form-info {
+                margin: 9px 0 23px 0;
+
+                .qodef-vs-contact-form-title h1 {
+                    font-size: 27px;
+                }
+
+                .qodef-vs-contact-form-subtitle {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 22px;
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .qodef-vertical-showcase {
+
+        .qodef-vs-social-widget {
+            margin-top: 46px;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .qodef-vertical-showcase {
+        margin-top: -60px;
+
+        .qodef-vs-social-widget {
+            margin-top: 20px;
+        }
+
+        .qodef-vs-holder {
+
+            .qodef-vs-frame-holder {
+                top: 20%;
+                left: 24%;
+
+                .qodef-vs-frame-mobile-holder {
+            
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+
+            .qodef-vs-frame-info {
+                @include qodefTransform(scale(.8));
+    
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 111%;
+                    }
+                    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 9%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: 4%;
+                    left: 50%;
+                }
+    
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 114%;
+                    left: 53%;
+                }
+    
+                .qodef-vs-frame-info-other {
+                    margin-top: 190%;
+                    left: -4%;
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+            margin-top: 15px;
+            max-height: 422px;
+
+            .qodef-vs-contact-form-subtitle {
+                display: none;
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .qodef-vertical-showcase {
+
+        .qodef-vs-holder {
+
+            .qodef-vs-frame-holder  {
+                top: 12%;
+                left: 19%;
+            
+                .qodef-vs-frame-mobile-holder {
+                
+                    img {
+                        width: 196px;
+                    }
+                }
+            }
+
+            .qodef-vs-frame-info {
+    
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 101%;
+                    }
+                    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 6%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: -4%;
+                    left: 52%;
+                }
+    
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 105%;
+                    left: 53%;
+                }
+    
+                .qodef-vs-frame-info-other {
+                    margin-top: 196%;
+                    left: -14%;
+                }
+            }
+        }
+
+        .qodef-vs-contact-form {
+
+            .qodef-custom-cf7 {
+
+                .qodef-grid-col-6 {
+                    input {
+                        height: 16px;
+                    }
+                }
+            }
+
+            .qodef-custom-cf7-btn {
+                margin-top: -33px;
+            }
+
+            .qodef-vs-contact-form-info {
+                margin: 5px 0 23px;
+
+                .qodef-vs-contact-form-subtitle {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .qodef-vs-social-widget {
+            margin-top: 18px;
+        }
+    }
+}
+
+// no-flexboxlegacy support
+
+.no-flexboxlegacy {
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-holder {
+            display: block;
+            
+            .qodef-vs-stripe {
+                top: 50%;
+                left: -100%;
+            }
+
+            .qodef-vs-frame-holder {
+                top: 3%;
+                left: 34%;
+            }
+
+            .qodef-vs-frame-info {
+                width: 100%;
+                height: 100%;
+
+                &.qodef-vs-frame-even {
+                    .qodef-vs-frame-info-top {
+                        margin-top: 36%;
+                    }
+    
+                    .qodef-vs-frame-info-bottom {
+                        margin-top: 11%;
+                    }
+                }
+
+                .qodef-vs-frame-info-top {
+                    margin-top: 13%;
+                    left: 42%;
+                }
+
+                .qodef-vs-frame-info-bottom {
+                    margin-top: 34%;
+                    left: 50%;
+                }
+
+                .qodef-vs-frame-info-other {
+                    margin-top: 33%;
+                    left: 40%;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            top: 45%;
+        }
+    }
+
+    .qodef-vertical-showcase {
+
+        .qodef-vs-frame-info {
+
+            .qodef-vs-frame-info-bottom {
+                
+                .qodef-vs-frame-slide-number, .qodef-vs-frame-slide-text{
+                    @include qodefTransform(translateX(-450px));
+                }
+            }
+            
+            .qodef-vs-frame-info-top {
+        
+                .qodef-vs-frame-subtitle, .qodef-vs-frame-title {
+                    @include qodefTransform(translateX(-500px));
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Vertical Showcase responsive style - end
+   ========================================================================== */

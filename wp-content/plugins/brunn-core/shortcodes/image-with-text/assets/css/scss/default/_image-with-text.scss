@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.qodef-image-with-text-holder {
+    @include qodefRelativeHolderLayout();
+
+	.rev_slider & {
+		display: block;
+	}
+	
+	&.qodef-has-shadow {
+		
+		.qodef-iwt-image {
+            box-shadow: 3px 4px 40px 0px rgba(0, 0, 0, 0.1);
+        }
+	}
+	
+	.qodef-iwt-image {
+		@include qodefRelativeHolderLayout();
+
+		.rev_slider & {
+			display: block;
+		}
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.qodef-iwt-text-holder {
+		@include qodefRelativeHolderLayout();
+	}
+
+    .qodef-iwt-background-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 90px;
+        line-height: 1em;
+        color: #f5f5f5;
+        font-family: $additional-text-font;
+		font-weight: 400;
+		opacity: 0;
+		@include qodefTransition(1s .2s cubic-bezier(0.89, 0.14, 0.25, 1));
+		
+		&.qodef-item-appear {
+			opacity: 1;
+		}
+    }
+	
+	.qodef-iwt-title {
+		margin: 32px 0 0;
+        position: relative;
+        z-index: 1;
+	}
+	
+	.qodef-iwt-text {
+		margin: 14px 0 0;
+        position: relative;
+        z-index: 1;
+        line-height: 1.28em;
+
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+		
+		.qodef-iwt-image {
+			@include qodefTransition(.3s);
+
+			&:hover {
+				@include qodefTransform(translateY(-3px));
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-iwt-image {
+			
+			a {
+				@include qodefImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include qodefTransform(scale(1));
+				@include qodefTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+
+	&.qodef-has-bottom-buttons {
+		.qodef-iwt-bottom-buttons-holder{
+			margin: 0;
+			position: relative;
+			z-index: 2; //to be above hover overlay over title
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.2s ease;
+
+			.qodef-iwt-bottom-link{
+				margin: 0px 7px 0 7px;
+				font-size: 10px;
+				font-weight: 500;
+				letter-spacing: 0.09em;
+				color: #aeaeae;
+				position: relative;
+
+				&:after{
+					content: "/";
+					pointer-events: none;
+					z-index: 10;
+					display: inline-block;
+					position: absolute;
+					cursor: cell;
+					right: -7px;
+					top: 1px;
+					height: 100%;
+					line-height: 1em;
+					color: #aeaeae;
+				}
+
+				&:first-child{
+					margin-left: 0;
+				}
+
+				&:last-child:after{
+					display: none;
+				}
+
+				&:hover{
+					color: $default-heading-color;
+				}
+			}
+		}
+
+		&:hover{
+			.qodef-iwt-bottom-buttons-holder{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

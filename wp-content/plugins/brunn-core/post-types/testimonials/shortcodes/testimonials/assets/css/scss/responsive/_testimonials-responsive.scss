@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.qodef-testimonials-holder {
+
+    @include ipad-landscape {
+
+        .qodef-owl-slider {
+            .owl-nav {
+                display: none;
+            }
+        }
+
+        .qodef-testimonials {
+            padding: 0 50px;
+        }
+
+    }
+
+    @include phone-portrait {
+        .qodef-testimonials {
+            padding: 0 8px;
+        }
+    }
+
+}
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */
