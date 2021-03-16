@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Footer styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+.qodef-page-footer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.no-touch body:not(.error404) .qodef-page-footer.qodef-footer-uncover {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  -webkit-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.qodef-right-side-menu-opened .qodef-page-footer.qodef-footer-uncover {
+  left: -270px;
+}
+
+.qodef-page-footer .qodef-footer-top-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #000;
+  border-top: 0 solid #e1e1e1;
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-center {
+  text-align: center;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-left {
+  text-align: left;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-right {
+  text-align: right;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner {
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner.qodef-grid {
+  padding: 131px 0 106px;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner.qodef-full-width {
+  padding: 131px 40px 106px;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner {
+  border-top: 0 solid #e1e1e1;
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner.qodef-grid {
+  padding: 31px 0;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner.qodef-full-width {
+  padding: 31px 40px;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner .qodef-grid-row > *:first-child:not(:last-child) {
+  text-align: left;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner .qodef-grid-row > *:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner .qodef-grid-row > *:first-child:last-child {
+  text-align: right;
+}
+
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=footer-map.css.map */

@@ -1,0 +1,32 @@
+.qodef-divided-holder {
+
+    @media only screen and (min-width: 1025px) {
+
+        .qodef-divided-image-holder {
+            padding-right: 0 !important;
+        }
+    }
+}
+
+.qodef-divided-holder {
+    @include ipad-landscape() {
+
+        display: block;
+
+        > * {
+            width: 100%;
+        }
+
+        .qodef-divided-image {
+            position: relative !important; /* overwrite init fixed image  */
+            top: auto;
+            background-image: none !important; /* overwrite option via chortcode */
+
+            img {
+                display: block;
+            }
+        }
+
+
+    }
+}

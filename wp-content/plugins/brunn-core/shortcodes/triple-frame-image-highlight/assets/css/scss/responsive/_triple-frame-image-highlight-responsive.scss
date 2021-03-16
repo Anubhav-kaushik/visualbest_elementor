@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Triple Frame Image Highlight shortcode responsive styles - begin
+   ========================================================================== */
+
+.qodef-triple-frame-image-highlight {
+    @include ipad-landscape {
+        .qodef-tfih-top-bar-left {
+            width: 5vw;
+            $size: .5vw;
+
+            > span {
+                height: $size;
+                width: $size;
+                border-radius: $size;
+            }
+        }
+
+        .qodef-tfih-top-bar-right {
+            width: 2vw;
+            $size: 2px;
+
+            > span {
+                height: $size;
+                width: $size;
+                border-radius: $size;
+            }
+        }
+    }
+
+    @include phone-landscape {
+        .qodef-tfih-top-bar-right {
+            display: none;
+        }
+    }
+}
+
+/* ==========================================================================
+   Triple Frame Image Highlight shortcode responsivestyles - end
+   ========================================================================== */

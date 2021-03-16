@@ -1,0 +1,445 @@
+/* ==========================================================================
+   Portfolio shortcode style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+    @include qodefRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+	    .qodef-pl-item-inner {
+		    @include qodefRelativeHolderLayout();
+	    }
+	    
+	    .qodef-pli-image {
+		    @include qodefRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+
+	    .qodef-pli-link {
+		    @include qodefAbsoluteHolderLayout();
+	    }
+
+	    .qodef-pli-text-wrapper {
+	        @include qodefTableLayout();
+			height: auto;
+	    }
+
+	    .qodef-pli-text {
+		    @include qodefTableCellLayout();
+
+		    .qodef-pli-title {
+				margin: 0;
+				font-weight: 700;
+				color: #212121;
+		    }
+
+		    .qodef-pli-category-holder {
+			    position: relative;
+			    display: block;
+			    margin: 4px 0 0;
+				font-family: $additional-text-font;
+				line-height: 23px;
+
+			    a {
+				    position: relative;
+				    display: inline-block;
+				    vertical-align: middle;
+				    padding: 0 6px 0 0;
+				    margin: 0 3px 0 0;
+				    z-index: 8;
+					color: #484848;
+
+					&:hover{
+						color: $first-main-color;
+					}
+				    
+				    &:after {
+					    position: absolute;
+					    top: 0;
+					    right: -4px;
+					    content: '/';
+						color: #484848;
+					    font-size: 12px;
+					    line-height: inherit;
+				    }
+
+				    &:last-child {
+					    margin: 0;
+					    padding: 0;
+					    
+					    &:after {
+						    display: none;
+					    }
+				    }
+			    }
+		    }
+
+		    .qodef-pli-excerpt {
+			    margin: 3px 0 0;
+		    }
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	/***** Specific Global Style - begin *****/
+	
+	&.qodef-pl-has-shadow {
+		
+		article {
+			
+			.qodef-pli-image {
+				box-shadow: $default-box-shadow;
+			}
+		}
+	}
+	
+	&.qodef-pl-has-filter {
+		
+		.qodef-pl-inner {
+			overflow: hidden;
+		}
+	}
+	
+	&.qodef-pl-no-content {
+		
+		.qodef-pli-text-holder {
+			display: none;
+		}
+	}
+	/***** Specific Global Style - end *****/
+	
+	&.qodef-pl-masonry {
+
+        &.qodef-fixed-masonry-items {
+	        
+            article {
+	            
+                .qodef-pl-item-inner,
+                .qodef-pli-image {
+		            height: 100%;
+	            }
+            }
+        }
+	}
+
+	/***** Portfolio Types - end *****/
+
+	/***** Additional Features - begin *****/
+
+	&.qodef-pl-has-animation {
+
+		article {
+			opacity: 0;
+			@include qodefTransform(translateY(80px));
+			@include qodefTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+
+			&.qodef-item-show {
+				opacity: 1;
+				@include qodefTransform(translateY(0));
+
+				&.qodef-item-shown {
+					@include qodefTransition(none);
+				}
+			}
+			
+			.touch & {
+				opacity: 1;
+				@include qodefTransform(translateY(0));
+			}
+		}
+	}
+
+	/***** Additional Features - end *****/
+}
+
+/* ==========================================================================
+   Portfolio shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio filter style - begin
+   ========================================================================== */
+
+.qodef-pl-filter-holder {
+    @include qodefRelativeHolderLayout();
+    margin: 0 0 30px;
+    text-align: center;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 10px;
+	        padding: 0 22px;
+            cursor: pointer;
+	        
+	        @include laptop-landscape-large {
+		        padding: 0 16px;
+	        }
+	
+	        @include ipad-landscape {
+		        padding: 0 10px;
+	        }
+
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                color: $default-heading-color;
+                font-size: 12px;
+                line-height: 22px;
+                white-space: nowrap;
+                @include qodefTransition(color .2s ease-out);
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: .08em;
+            }
+
+            &.qodef-pl-current,
+            &:hover {
+
+                span {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio filter style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio standard pagination style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	
+	&.qodef-pl-pag-standard {
+		
+		.qodef-pl-inner {
+			opacity: 1;
+			@include qodefTransition(opacity .2s ease-out);
+		}
+		
+		&.qodef-pl-pag-standard-animate {
+			
+			.qodef-pl-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.qodef-pl-standard-pagination {
+	@include qodefStandardPaginationStyle('shortcode');
+}
+/* ==========================================================================
+   Portfolio standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio load more pagination style - begin
+   ========================================================================== */
+
+.qodef-pl-load-more-holder {
+	@include qodefRelativeHolderLayout();
+
+    .qodef-pl-load-more {
+	    margin: 60px 0 0;
+		text-align: center;
+		
+		.qodef-btn.qodef-btn-outline.qodef-btn-after-next {
+			
+			&:hover {
+            	color: $default-heading-color !important;
+            	background-color: transparent !important;
+				border-color: $default-border-color !important;
+			}
+		}
+    }
+}
+/* ==========================================================================
+   Portfolio load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio loading element style - begin
+   ========================================================================== */
+
+.qodef-pl-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 40px 0 20px;
+	color: $default-heading-color;
+	text-align: center;
+
+	&.qodef-filter-trigger {
+		position: absolute;
+		top: 250px;
+		left: 0;
+	}
+	
+    &.qodef-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	
+	    .qodef-pl-has-filter & {
+		    top: 150px;
+	    }
+    }
+
+	&.qodef-showing {
+		display: block;
+	}
+
+	.qodef-brunn-spinner-holder {
+		display: inline-block;
+		@include qodefTransform(rotate(45deg));
+	
+		.qodef-brunn-spinner {
+			height: 32px;
+			width: 32px;
+			@include qodefAnimation(brunn-1 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite);
+		
+			@-webkit-keyframes brunn-1 {
+				0%   { @include qodefTransform(rotate(0deg))}
+				100% { @include qodefTransform(rotate(360deg)) }
+			}
+			@keyframes brunn-1 {
+				0%   { @include qodefTransform(rotate(0deg))}
+				100% { @include qodefTransform(rotate(360deg)) }
+			}
+		
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0; left: 0;
+				bottom: 0; right: auto;
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				background: $first-main-color;
+				border-radius: 50%;
+				@include qodefAnimation(brunn-2 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite);
+			}
+			@-webkit-keyframes brunn-2 {
+				0%   { @include qodefTransform(translate3d(-10px, 0, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(24px, 0, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(-10px, 0, 0) scale(1))}
+			}
+			@keyframes brunn-2 {
+				0%   { @include qodefTransform(translate3d(-10px, 0, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(24px, 0, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(-10px, 0, 0) scale(1))}
+			}
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0; left: auto;
+				bottom: 0; right: 0;
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				background: $first-main-color;
+				border-radius: 50%;
+				@include qodefAnimation(brunn-3 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite);
+			}
+			@-webkit-keyframes brunn-3 {
+				0%   { @include qodefTransform(translate3d(10px, 0, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(-24px, 0, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(10px, 0, 0) scale(1))}
+			}
+			@keyframes brunn-3 {
+				0%   { @include qodefTransform(translate3d(10px, 0, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(-24px, 0, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(10px, 0, 0) scale(1))}
+			}
+		
+			div {
+				display: block;
+				position: absolute;
+				top: 0; left: 0;
+				bottom: 0; right: 0;
+				margin: auto;
+				height: 32px;
+				width: 32px;
+		
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0; left: 0;
+					bottom: auto; right: 0;
+					margin: auto;
+					width: 12px;
+					height: 12px;
+					background: $first-main-color;
+					border-radius: 50%;
+					@include qodefAnimation(brunn-4 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite);
+				}
+		
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: auto; left: 0;
+					bottom: 0; right: 0;
+					margin: auto;
+					width: 12px;
+					height: 12px;
+					background: $first-main-color;
+					border-radius: 50%;
+					@include qodefAnimation(brunn-5 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite);
+				}
+			}
+			@-webkit-keyframes brunn-4 {
+				0%   { @include qodefTransform(translate3d(0, -10px, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(0, 24px, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(0, -10px, 0) scale(1))}
+			}
+			@keyframes brunn-4 {
+				0%   { @include qodefTransform(translate3d(0, -10px, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(0, 24px, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(0, -10px, 0) scale(1))}
+			}
+			@-webkit-keyframes brunn-5 {
+				0%   { @include qodefTransform(translate3d(0, 10px, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(0, -24px, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(0, 10px, 0) scale(1))}
+			}
+			@keyframes brunn-5 {
+				0%   { @include qodefTransform(translate3d(0, 10px, 0) scale(1))}
+				50%  { @include qodefTransform(translate3d(0, -24px, 0) scale(.8))}
+				100% { @include qodefTransform(translate3d(0, 10px, 0) scale(1))}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio loading element style - end
+   ========================================================================== */

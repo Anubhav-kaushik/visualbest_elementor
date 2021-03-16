@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-left,
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-right {
+    width: auto;
+    float: none;
+  }
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-right {
+    text-align: inherit;
+    margin: 0;
+  }
+}
+
+/* ==========================================================================
+   Blog Common responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .qodef-blog-list-holder.qodef-grid-list.qodef-three-columns .qodef-item-space {
+    width: 50%;
+  }
+  .qodef-blog-list-holder.qodef-grid-list.qodef-three-columns .qodef-item-space:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+/* ==========================================================================
+   Blog Common responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-blog-slider-holder.qodef-bs-carousel-centered .active.center .qodef-item-text-wrapper {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-map-responsive.css.map */

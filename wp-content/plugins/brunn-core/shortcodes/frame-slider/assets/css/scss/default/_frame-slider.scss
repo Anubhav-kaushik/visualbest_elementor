@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Frame Slider shortcode style - begin
+   ========================================================================== */
+
+.qodef-frame-slider-holder {
+	@include qodefRelativeHolderLayout();
+	text-align: center;
+	padding: 36px 0 0;
+	
+	
+	.qodef-fs-phone {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+
+		img {
+			display: block;
+		}
+	}
+
+	.qodef-fs-slides {
+		position: absolute;
+		top: 11.6%;
+		left: 2%;
+		cursor: -webkit-grab;
+		visibility: hidden;
+
+		@include qodefTransform(translateX(-2%));
+
+		@include phone-portrait {
+			top: 21%;
+		}
+
+		img {
+
+			@include ipad-portrait {
+				width: 83%;
+				margin: auto;
+			}
+
+			@include phone-portrait {
+				width: 69%;
+				margin: auto;
+			}
+		}
+
+		.qodef-fs-slide{
+			margin: 0 55px;
+			position: relative;
+		}
+
+		a, img {
+			display: block;
+		}
+	}
+	.qodef-owl-slider {
+		.owl-dots {
+			display: none;
+		}
+	}
+}
+/* ==========================================================================
+   Frame Slider shortcode style - end
+   ========================================================================== */

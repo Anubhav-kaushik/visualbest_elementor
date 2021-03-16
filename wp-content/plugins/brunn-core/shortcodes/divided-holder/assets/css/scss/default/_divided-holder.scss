@@ -1,0 +1,52 @@
+.qodef-divided-holder {
+    display: flex;
+
+    &.qodef-divided-image-after {
+        .qodef-divided-image {
+            position: relative !important; /* overwrite init fixed image  */
+            top: auto;
+        }
+        align-items: flex-end;
+    }
+
+    > * {
+        width: 50%;
+    }
+
+    .qodef-divided-image-holder {
+        position: relative;
+    }
+
+    .qodef-divided-image {
+        background-size: cover;
+        position: relative;
+        width: 100%;
+
+        img {
+            display: none;
+        }
+
+        &.qodef-divided-image-init {
+            position: fixed;
+            top: 0;
+        }
+
+        &:not(.qodef-divided-image-init) {
+            position: relative;
+            top: auto !important; /* block script change */
+        }
+    }
+
+    /* fix for fixed header problem. This is only if image has to be fixed on init (before scrolled) */
+    &.qodef-dh-init-fixed {
+        .qodef-divided-image {
+            position: fixed;
+            top: 0;
+        }
+    }
+
+    .qodef-divided-inner {
+        box-sizing: border-box;
+    }
+
+}

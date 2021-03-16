@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.qodef-iwt {
+	@include qodefRelativeHolderLayout();
+	
+	.qodef-iwt-icon {
+        position: relative;
+        z-index: 1;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.qodef-icon-shortcode {
+			line-height: 1;
+			
+			&.qodef-circle,
+			&.qodef-square {
+				line-height: 2;
+			}
+		}
+	}
+	
+	.qodef-iwt-title {
+		margin: 0;
+		line-height: 1.2em;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+
+			&:hover {
+				color: $default-heading-color;
+			}
+		}
+
+        position: relative;
+        z-index: 1;
+	}
+
+    .qodef-iwt-background-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 130px;
+        line-height: 1em;
+        color: #f5f5f5;
+        font-family: $additional-text-font;
+		font-weight: 400;
+		opacity: 0;
+		@include qodefTransition(1s .2s cubic-bezier(0.89, 0.14, 0.25, 1));
+		
+		&.qodef-item-appear {
+			opacity: 1;
+		}
+    }
+	
+	.qodef-iwt-title-text {
+		display: block;
+        position: relative;
+        z-index: 1;
+	}
+	
+	.qodef-iwt-text {
+		margin: 20px 0 0;
+        position: relative;
+        z-index: 1;
+		font-size: 15px;
+	}
+	
+	&.qodef-iwt-icon-left {
+		width: auto;
+		
+		.qodef-iwt-icon,
+		.qodef-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.qodef-iwt-icon {
+			position: relative;
+			top: 1px;
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.qodef-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+	
+	&.qodef-iwt-icon-left-from-title {
+		
+		.qodef-iwt-icon,
+		.qodef-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.qodef-iwt-icon {
+			
+			.qodef-icon-element {
+				@include qodefTransition(none);
+			}
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.qodef-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+	
+	&.qodef-iwt-icon-top {
+		text-align: center;
+
+        .qodef-iwt-background-text {
+            left: 50%;
+            @include qodefTransform(translateX(-50%));
+        }
+		
+		.qodef-iwt-content {
+			padding: 23px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

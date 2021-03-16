@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+
+.qodef-testimonials-holder {
+    
+    &.qodef-testimonials-boxed {
+
+        .qodef-testimonial-content {
+            padding: 40px 57px 58px;
+            background-color: #fbfbfb;
+            box-sizing: border-box;
+        }
+
+        .qodef-testimonials-author-holder {
+            @include qodefRelativeHolderLayout();
+            margin: 9px 0 0;
+
+            .qodef-testimonial-image {
+                float: left;
+            }
+
+            .qodef-testimonial-author {
+                padding: 3px 0 0 110px;
+            }
+        }
+
+        .qodef-owl-slider .owl-dots {
+            bottom: -30px;
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+

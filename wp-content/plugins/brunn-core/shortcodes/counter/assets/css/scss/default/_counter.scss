@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Counter shortcode style - begin
+   ========================================================================== */
+
+.qodef-counter-holder {
+    @include qodefRelativeHolderLayout();
+    opacity: 0;
+    @include qodefTransition(opacity 0.2s ease-in);
+	
+	.qodef-counter-inner {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+    .qodef-counter {
+	    height: 1em;
+	    display: inline-block !important;
+	    vertical-align: middle;
+	    color: #e5e5e5;
+	    font-size: 90px;
+	    line-height: 0.97em;
+	    font-weight: 400;
+	    overflow: hidden;
+        margin: 9px 0 0;
+        font-family: $additional-text-font;
+    }
+
+    .qodef-counter-title {
+	    margin: 0 0 0;
+        max-width: 100px;
+    }
+
+    .qodef-counter-text {
+	    margin: 14px 0 0;
+    }
+
+    &.qodef-counter-enable-separator {
+        border-left: 1px solid #e1e1e1;
+        padding-left: 30px;
+        @include phone-portrait {
+            border: none;
+            padding: 0;
+        }
+    }
+}
+/* ==========================================================================
+   Counter shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	
+	&.qodef-pl-standard-shader {
+		
+		article {
+			
+			&:hover {
+				
+				.qodef-pli-image {
+
+					img {
+						@include qodefTransform(scale(1.04));
+					}
+				}
+			}
+			
+			.qodef-pli-image {
+				position: relative;
+				overflow: hidden;
+
+				img {
+					display: block;
+					backface-visibility: hidden;
+					@include qodefTransition(.6s);
+					
+				}
+			}
+			
+			.qodef-pli-link {
+				z-index: 2;
+			}
+		}
+		
+		.qodef-pli-text-holder {
+			@include qodefRelativeHolderLayout();
+			margin: 22px 0 74px;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - end
+   ========================================================================== */

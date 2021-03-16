@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Single Image shortcode style - begin
+   ========================================================================== */
+
+.qodef-single-image-holder {
+
+    @include phone-landscape {
+        .qodef-si-text-box {
+            width: 100px;
+            height: 100px;
+            bottom: 20px;
+            left: -20px;
+
+            .qodef-si-small-text {
+                font-size: 10px;
+            }
+
+            .qodef-si-big-text {
+                font-size: 20px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Single Image shortcode style - end
+   ========================================================================== */

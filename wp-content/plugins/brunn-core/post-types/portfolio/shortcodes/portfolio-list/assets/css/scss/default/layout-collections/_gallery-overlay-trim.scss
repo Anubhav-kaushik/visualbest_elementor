@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+
+    &.qodef-pl-gallery-overlay-trim {
+
+        &.qodef-pl-has-shadow {
+
+            .qodef-pl-item-inner {
+                box-shadow: $default-box-shadow;
+            }
+        }
+
+        article {
+
+            &:hover {
+
+                .qodef-pli-text-holder {
+                    opacity: 1;
+                    @include qodefTransition(opacity .3s);
+
+                    .qodef-pli-text {
+                        @include qodefTransform(translateY(0));
+                    }
+                }
+            }
+
+            .qodef-pl-item-inner {
+                overflow: hidden;
+            }
+
+            .qodef-pli-text {
+                text-align: left;
+                padding: 20px;
+                vertical-align: bottom;
+
+                .qodef-pli-category-holder {
+
+                    a {
+                        color: $default-text-color;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .qodef-pli-text-holder {
+            position: absolute;
+            display: block;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #fff;
+            opacity: 0;
+            text-align: center;
+            box-sizing: border-box;
+            @include qodefTransition(opacity .2s);
+
+            .qodef-pli-text-wrapper{
+                height: 100%;
+            }
+
+            .qodef-pli-text {
+                @include qodefTransform(translateY(5px));
+                @include qodefTransition(.2s .1s);
+                backface-visibility: hidden;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */
